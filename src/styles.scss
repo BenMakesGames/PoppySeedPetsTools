@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+html,body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;;
+}
+
+@mixin track() {
+  background-color: white;
+}
+
+input {
+  &::-webkit-slider-runnable-track { @include track }
+  &::-moz-range-track { @include track }
+  &::-ms-track { @include track }
+}
+
+#editor {
+  display: grid;
+  grid-template-columns: auto 350px;
+  grid-template-areas:
+    "subject controls"
+    "preview controls"
+  ;
+
+  > #controls {
+    background-color: #ddd;
+    grid-area: controls;
+    padding: 0 1rem;
+  }
+
+  > #subject {
+    grid-area: subject;
+
+    > div {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      border: 1px solid red;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  > #preview {
+    grid-area: preview;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    pointer-events: none;
+
+    > div {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      padding: 25px;
+    }
+  }
+
+  .range {
+    display: flex;
+    flex-direction: row;
+
+    > input[type=number] {
+      width: 3rem;
+    }
+
+    > input[type=range] {
+      width: 100%;
+    }
+  }
+
+  #pet {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .item {
+    position: absolute;
+
+    > div {
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .sql {
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+}
