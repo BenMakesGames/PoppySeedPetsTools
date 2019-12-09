@@ -2,26 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Development server
+## Running PoppySeedPetsTools
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In the future, I may package PoppySeedPetsTools up into a nice, stand-alone program. For now, however, you'll need to install npm and Angular in order to run it.
 
-## Code scaffolding
+The following instructions are intended for a Windows or Mac user who is NOT a developer. You will need to run a couple command line instructions.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. **Install Node and npm.** You can download an installer for them here: https://nodejs.org/en/download/
+2. **Install Angular.** Open up a command prompt anywhere, and run `npm install -g @angular/cli` (If you're wondering what this weird command I'm asking you to run is, you can learn more about Angular here: https://angular.io/cli)
+3. **Download PoppySeedPetsTools.** Click the "Clone or download" button above, and choose "Download ZIP". Extract the ZIP somewhere on your computer. (Or, if you're familiar with git, you use that, and you don't need to me tell you how :P)
+  * Confirm that you know where you put everything :P Open the PoppySeedPetsTools project folder; if you can see files called things like ".gitignore", "angular.json", etc, then you're in the right place.
+4. **Run PoppySeedPetsTools.** Open a command prompt in the PoppySeedPetsTools project folder, and run `ng serve`. In your browser, visit http://localhost:4200
