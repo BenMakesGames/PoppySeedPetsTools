@@ -4,7 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Running PoppySeedPetsTools
 
-
+1. **Download PoppySeedPetsTools.**
+   * Download the zip appropriate for your computer:
+      * Windows: https://github.com/BenMakesGames/PoppySeedPetsTools/build/poppy-seed-pets-tools-win32.zip
+      * Linux: *not yet available*
+      * MacOS: *not yet available*
+   * Extract the zip wherever you want.
+2. **Run PoppySeedPetsTools.** Open the folder where you extracted the zip contents. Insider the folder "poppy-seed-pets-tools" is a program called "poppy-seed-pets-tools". Run it!
 
 ## Developing PoppySeedPetsTools
 
