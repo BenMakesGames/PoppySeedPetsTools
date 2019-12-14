@@ -1,13 +1,16 @@
 {
   "name": "poppy-seed-pets-tools",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build --prod && electron .",
+    "build:win": "ng build --prod && electron-packager . --platform=win32 --overwrite --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --ignore=/.idea"
   },
   "private": true,
   "dependencies": {
@@ -29,10 +32,12 @@
     "@angular/cli": "~7.3.9",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "electron": "^7.1.5",
+    "electron-packager": "^14.1.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",

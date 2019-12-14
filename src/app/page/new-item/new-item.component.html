@@ -31,7 +31,7 @@
 
   <div id="preview">
     <div *ngFor="let s of SPECIES; let i = index">
-      <img [src]="'/assets/test-images/pets/' + s.image + '.svg'" id="pet" [style.z-index]="s.handBehind ? 1 : -1">
+      <img [src]="'assets/test-images/pets/' + s.image + '.svg'" id="pet" [style.z-index]="s.handBehind ? 1 : 0">
       <div class="item" [ngStyle]="toolPositionStyle[i]">
         <div [ngStyle]="toolRotationStyle[i]">
         </div>

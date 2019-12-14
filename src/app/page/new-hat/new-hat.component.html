@@ -32,7 +32,7 @@
 
   <div id="preview">
     <div *ngFor="let s of SPECIES; let i = index">
-      <img [src]="'/assets/test-images/pets/' + s.image + '.svg'" id="pet">
+      <img [src]="'assets/test-images/pets/' + s.image + '.svg'" id="pet">
       <div class="item" [ngStyle]="hatPositionStyle[i]">
         <div [ngStyle]="hatRotationStyle[i]">
         </div>

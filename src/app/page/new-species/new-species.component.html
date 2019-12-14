@@ -42,12 +42,12 @@
 
   <div id="preview">
     <div *ngFor="let o of OUTFITS; let i = index">
-      <img [ngStyle]="{ backgroundImage: svgBackgroundData }" id="pet">
-      <div class="item" [ngStyle]="hatPositionStyle[i]">
-        <img [ngStyle]="hatRotationStyle[i]" [src]="'/assets/test-images/hats/' + o.hat.image + '.svg'">
+      <img [ngStyle]="{ backgroundImage: svgBackgroundData }" id="pet" style="z-index: 1">
+      <div class="item" [ngStyle]="hatPositionStyle[i]" style="z-index: 2">
+        <img [ngStyle]="hatRotationStyle[i]" [src]="'assets/test-images/hats/' + o.hat.image + '.svg'">
       </div>
-      <div class="item" [ngStyle]="toolPositionStyle[i]" [style.z-index]="species.handBehind ? -1 : 1">
-        <img [ngStyle]="toolRotationStyle[i]" [src]="'/assets/test-images/tools/' + o.tool.image + '.svg'">
+      <div class="item" [ngStyle]="toolPositionStyle[i]" [style.z-index]="species.handBehind ? 0 : 3">
+        <img [ngStyle]="toolRotationStyle[i]" [src]="'assets/test-images/tools/' + o.tool.image + '.svg'">
       </div>
     </div>
   </div>
