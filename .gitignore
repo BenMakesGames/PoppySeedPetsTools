@@ -44,4 +44,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/poppy-seed-pets-tools-win32-x64
+/build/poppy-seed-pets-tools-win32-x64
