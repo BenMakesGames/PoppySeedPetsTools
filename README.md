@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. **Download PoppySeedPetsTools.**
    * Download the zip appropriate for your computer:
-      * Windows: https://github.com/BenMakesGames/PoppySeedPetsTools/build/poppy-seed-pets-tools-win32-x64.zip
+      * Windows: https://github.com/BenMakesGames/PoppySeedPetsTools/raw/main/build/poppy-seed-pets-tools-win32-x64.zip
       * Linux: *not yet available*
       * MacOS: *not yet available*
    * Extract the zip wherever you want.
