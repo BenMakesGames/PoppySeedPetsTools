@@ -24,10 +24,19 @@ input {
     "preview controls"
   ;
 
+  &.dark {
+    background-color: #333;
+  }
+
   > #controls {
     background-color: #ddd;
     grid-area: controls;
     padding: 0 1rem;
+
+    > div {
+      position: sticky;
+      top: 1rem;
+    }
   }
 
   > #subject {

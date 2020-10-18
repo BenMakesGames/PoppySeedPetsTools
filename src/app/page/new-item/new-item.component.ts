@@ -15,6 +15,7 @@ export class NewItemComponent implements OnInit {
 
   private readonly SPECIES: SpeciesModel[] = SPECIES;
 
+  darkMode = false;
   SQL = '';
 
   grip: GripModel;
@@ -59,6 +60,11 @@ export class NewItemComponent implements OnInit {
   doChangeGripProperty()
   {
     this.updateGripStyles();
+  }
+
+  doToggleDarkMode()
+  {
+    this.darkMode = !this.darkMode;
   }
 
   private updateGripStyles()

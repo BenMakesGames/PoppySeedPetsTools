@@ -88,6 +88,7 @@ export class NewSpeciesComponent implements OnInit {
     }
   ];
 
+  darkMode = false;
   SQL = '';
 
   species: SpeciesModel;
@@ -146,6 +147,11 @@ export class NewSpeciesComponent implements OnInit {
   doChangeGripProperty()
   {
     this.updateGripStyles();
+  }
+
+  doToggleDarkMode()
+  {
+    this.darkMode = !this.darkMode;
   }
 
   private updateGripStyles()

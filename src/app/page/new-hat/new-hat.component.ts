@@ -15,6 +15,7 @@ export class NewHatComponent implements OnInit {
 
   private readonly SPECIES: SpeciesModel[] = SPECIES;
 
+  darkMode = false;
   SQL = '';
 
   hat: HatModel;
@@ -59,6 +60,11 @@ export class NewHatComponent implements OnInit {
   doChangeGripProperty()
   {
     this.updateGripStyles();
+  }
+
+  doToggleDarkMode()
+  {
+    this.darkMode = !this.darkMode;
   }
 
   private updateGripStyles()
