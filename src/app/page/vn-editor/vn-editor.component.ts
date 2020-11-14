@@ -32,8 +32,25 @@ export class VnEditorComponent implements OnInit {
       const text = <string>this.fileReader.result;
       const data = JSON.parse(text);
 
-      this.stories = data.find(o => o.type === 'table' && o.name === 'story').data;
-      this.storySections = data.find(o => o.type === 'table' && o.name === 'story_section').data;
+      this.stories = data.find(o => o.type === 'table' && o.name === 'story').data.map(d => {
+        return <StoryModel>{
+          id: parseInt(d.id),
+          first_section_id: parseInt(d.firstChange),
+          title: d.title
+        }
+      });
+
+      this.storySections = data.find(o => o.type === 'table' && o.name === 'story_section').data.map(d => {
+        return <StorySectionModel>{
+          id: parseInt(d.id),
+          story_id: parseInt(d.story_id),
+          style: d.style,
+          background: d.background,
+          image: d.image,
+          content: d.content,
+          choices: JSON.parse(d.choices)
+        };
+      });
 
       if(this.stories.length > 0)
         this.doSelectStory(this.stories[0].id);

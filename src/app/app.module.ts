@@ -13,6 +13,7 @@ import { VnEditorComponent } from './page/vn-editor/vn-editor.component';
 import { VnChoicesEditorComponent } from './component/vn-choices-editor/vn-choices-editor.component';
 import { VnSingleChoiceEditorComponent } from './component/vn-single-choice-editor/vn-single-choice-editor.component';
 import { VnSingleActionEditorComponent } from './component/vn-single-action-editor/vn-single-action-editor.component';
+import { VnGraphComponent } from './component/vn-graph/vn-graph.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { VnSingleActionEditorComponent } from './component/vn-single-action-edit
     VnChoicesEditorComponent,
     VnSingleChoiceEditorComponent,
     VnSingleActionEditorComponent,
+    VnGraphComponent,
   ],
   imports: [
     BrowserModule,

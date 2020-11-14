@@ -1,9 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {StoryChoiceActionModel} from "../../model/story-choice-action.model";
-import {StoryChoiceActionExitModel} from "../../model/story-choice-action-exit.model";
 import {StoryChoiceActionReceiveItemModel} from "../../model/story-choice-action-receive-item.model";
 import {StoryChoiceActionSetStepModel} from "../../model/story-choice-action-set-step.model";
 import {StorySectionModel} from "../../model/story-section.model";
+import {GraphChangesService} from "../../service/graph-changes.service";
 
 @Component({
   selector: 'app-vn-single-action-editor',
@@ -21,9 +21,16 @@ export class VnSingleActionEditorComponent implements OnInit {
   @Input() action: StoryChoiceActionModel;
   @Output() actionOutput = new EventEmitter<StoryChoiceActionModel>();
 
-  constructor() { }
+  constructor(private graphChanges: GraphChangesService) { }
 
   ngOnInit() {
+  }
+
+  doChangeStep()
+  {
+    this.actionOutput.emit(this.action);
+
+    this.graphChanges.changes.next();
   }
 
   doChangeType(newType: string)
@@ -31,26 +38,24 @@ export class VnSingleActionEditorComponent implements OnInit {
     switch(newType)
     {
       case 'exit':
-        this.action = <StoryChoiceActionExitModel>{ type: 'exit' };
+        this.action.type = 'exit';
         break;
 
       case 'receiveItem':
-        this.action = <StoryChoiceActionReceiveItemModel>{
-          type: 'receiveItem',
-          item: '',
-          description: '%user.name% received this!'
-        };
+        this.action.type = 'receiveItem';
+        (<StoryChoiceActionReceiveItemModel>this.action).item = '';
+        (<StoryChoiceActionReceiveItemModel>this.action).description = '%user.name% received this!';
         break;
 
       case 'setStep':
-        this.action = <StoryChoiceActionSetStepModel>{
-          type: 'setStep',
-          step: 0,
-        };
+        this.action.type = 'setStep';
+        (<StoryChoiceActionSetStepModel>this.action).step = this.storySections[0].id;
         break;
     }
 
     this.actionOutput.emit(this.action);
+
+    this.graphChanges.changes.next();
   }
 
 }

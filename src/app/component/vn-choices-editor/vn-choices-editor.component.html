@@ -1,6 +1,6 @@
 <ol>
-  <li *ngFor="let choice of choicesData">
-    <app-vn-single-choice-editor [(choice)]="choice" [choice]="doUpdateChoice($event)" [storySections]="storySections"></app-vn-single-choice-editor>
+  <li *ngFor="let choice of choices">
+    <app-vn-single-choice-editor [(choice)]="choice" [storySections]="storySections"></app-vn-single-choice-editor>
     <p><button type="button" (click)="doDeleteChoice(choice)">Delete</button></p>
   </li>
 </ol>

@@ -6,7 +6,7 @@
   <pre>@TODO receive item</pre>
 </ng-container>
 <ng-container *ngIf="action.type === 'setStep'">
-  <select [(ngModel)]="action.step">
-    <option *ngFor="let s of storySections" [value]="s.id">#{{ s.id }} - {{ s.style }}: {{ s.content|slice:0:40 }}</option>
+  <select [(ngModel)]="action.step" (change)="doChangeStep()">
+    <option *ngFor="let s of storySections" [ngValue]="s.id">#{{ s.id }} - {{ s.style }}: {{ s.content|slice:0:40 }}</option>
   </select>
 </ng-container>

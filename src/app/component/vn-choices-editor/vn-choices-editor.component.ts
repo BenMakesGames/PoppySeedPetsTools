@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {StoryChoiceModel} from "../../model/story-choice.model";
 import {StorySectionModel} from "../../model/story-section.model";
 
@@ -7,55 +7,30 @@ import {StorySectionModel} from "../../model/story-section.model";
   templateUrl: './vn-choices-editor.component.html',
   styleUrls: ['./vn-choices-editor.component.scss']
 })
-export class VnChoicesEditorComponent implements OnInit, OnChanges {
+export class VnChoicesEditorComponent implements OnInit {
 
   @Input() storySections: StorySectionModel[];
 
-  @Input() choices: string;
-  @Output() choicesOutput = new EventEmitter<string>();
-
-  choicesData: StoryChoiceModel[];
+  @Input() choices: StoryChoiceModel[];
+  @Output() choicesOutput = new EventEmitter<StoryChoiceModel[]>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  ngOnChanges(changes: SimpleChanges)
-  {
-    if(changes.choices)
-    {
-      this.choicesData = JSON.parse(this.choices);
-    }
-  }
-
-  doUpdateChoice(updatedChoice: StoryChoiceModel)
-  {
-    this.notifyParent();
-  }
-
   doDeleteChoice(choice)
   {
-    this.choicesData = this.choicesData.filter(c => c !== choice);
-
-    this.notifyParent();
+    this.choices = this.choices.filter(c => c !== choice);
   }
 
   doAddChoice()
   {
-    this.choicesData.push({
+    this.choices.push({
       text: '',
       actions: [
         { type: 'exit' }
       ]
     });
-
-    this.notifyParent();
   }
-
-  private notifyParent()
-  {
-    this.choicesOutput.emit(JSON.stringify(this.choicesData));
-  }
-
 }
