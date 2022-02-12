@@ -12,7 +12,7 @@ export class VnSingleChoiceEditorComponent implements OnInit {
   @Input() storySections: StorySectionModel[];
 
   @Input() choice: StoryChoiceModel;
-  @Output() choiceOutput = new EventEmitter<StoryChoiceModel>();
+  @Output() choiceChange = new EventEmitter<StoryChoiceModel>();
 
   constructor() { }
 

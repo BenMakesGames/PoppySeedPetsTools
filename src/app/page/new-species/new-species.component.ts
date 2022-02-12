@@ -9,11 +9,11 @@ import {calculateHatStyles, calculateToolStyles} from "../../functions";
 })
 export class NewSpeciesComponent implements OnInit {
 
-  private readonly ITEM_SIZE = 200;
+  public readonly ITEM_SIZE = 200;
 
   private readonly size = '100px';
 
-  private readonly OUTFITS: { hat: HatModel, tool: GripModel }[] = [
+  public readonly OUTFITS: { hat: HatModel, tool: GripModel }[] = [
     {
       hat: {
         image: 'witch',

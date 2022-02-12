@@ -3,7 +3,7 @@ import {StorySectionModel} from "../../model/story-section.model";
 import * as d3 from 'd3';
 import {StoryChoiceActionSetStepModel} from "../../model/story-choice-action-set-step.model";
 import {GraphChangesService} from "../../service/graph-changes.service";
-import {Subscription} from "rxjs/index";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-vn-graph',

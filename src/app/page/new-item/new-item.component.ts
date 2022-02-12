@@ -9,11 +9,11 @@ import {calculateToolStyles, SPECIES} from "../../functions";
 })
 export class NewItemComponent implements OnInit {
 
-  private readonly ITEM_SIZE = 200;
+  public readonly ITEM_SIZE = 200;
 
   private readonly size = '100px';
 
-  private readonly SPECIES: SpeciesModel[] = SPECIES;
+  public readonly SPECIES: SpeciesModel[] = SPECIES;
 
   darkMode = false;
   SQL = '';
