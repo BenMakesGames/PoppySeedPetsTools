@@ -67,6 +67,13 @@ export class VnEditorComponent implements OnInit {
       this.expandedSectionId = sectionId;
   }
 
+  doAddStory()
+  {
+    /*this.stories.push(new {
+
+    });*/
+  }
+
   doSelectStory(storyId: number)
   {
     this.selectedStoryId = storyId;

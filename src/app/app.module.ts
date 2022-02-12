@@ -14,6 +14,7 @@ import { VnChoicesEditorComponent } from './component/vn-choices-editor/vn-choic
 import { VnSingleChoiceEditorComponent } from './component/vn-single-choice-editor/vn-single-choice-editor.component';
 import { VnSingleActionEditorComponent } from './component/vn-single-action-editor/vn-single-action-editor.component';
 import { VnGraphComponent } from './component/vn-graph/vn-graph.component';
+import { VnSetStepActionEditorComponent } from './component/vn-set-step-action-editor/vn-set-step-action-editor.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { VnGraphComponent } from './component/vn-graph/vn-graph.component';
     VnSingleChoiceEditorComponent,
     VnSingleActionEditorComponent,
     VnGraphComponent,
+    VnSetStepActionEditorComponent,
   ],
   imports: [
     BrowserModule,

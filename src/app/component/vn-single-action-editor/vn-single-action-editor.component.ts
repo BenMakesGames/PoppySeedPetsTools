@@ -4,6 +4,7 @@ import {StoryChoiceActionReceiveItemModel} from "../../model/story-choice-action
 import {StoryChoiceActionSetStepModel} from "../../model/story-choice-action-set-step.model";
 import {StorySectionModel} from "../../model/story-section.model";
 import {GraphChangesService} from "../../service/graph-changes.service";
+import {StoryChoiceActionExitModel} from "../../model/story-choice-action-exit.model";
 
 @Component({
   selector: 'app-vn-single-action-editor',
@@ -19,18 +20,13 @@ export class VnSingleActionEditorComponent implements OnInit {
   @Input() storySections: StorySectionModel[];
 
   @Input() action: StoryChoiceActionModel;
-  @Output() actionOutput = new EventEmitter<StoryChoiceActionModel>();
+  @Output() actionChange = new EventEmitter<StoryChoiceActionModel>();
+
+  setStepChoiceAction = () => <StoryChoiceActionSetStepModel>this.action;
 
   constructor(private graphChanges: GraphChangesService) { }
 
   ngOnInit() {
-  }
-
-  doChangeStep()
-  {
-    this.actionOutput.emit(this.action);
-
-    this.graphChanges.changes.next();
   }
 
   doChangeType(newType: string)
@@ -53,7 +49,7 @@ export class VnSingleActionEditorComponent implements OnInit {
         break;
     }
 
-    this.actionOutput.emit(this.action);
+    this.actionChange.emit(this.action);
 
     this.graphChanges.changes.next();
   }
