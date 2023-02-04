@@ -173,7 +173,7 @@ export class NewSpeciesComponent implements OnInit {
 
     this.SQL = `UPDATE pet_species
 SET
-    flip_x=` + (this.species.flipX ? 1 : 0) + `
+    flip_x=` + (this.species.flipX ? 1 : 0) + `,
     hand_x=` + this.species.handX + `,
     hand_y=` + this.species.handY + `,
     hand_angle=` + this.species.handAngle + `,
