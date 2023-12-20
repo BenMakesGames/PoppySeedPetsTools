@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PoppySeedPetsTools:build"
+            "buildTarget": "PoppySeedPetsTools:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "PoppySeedPetsTools:build:production"
+              "buildTarget": "PoppySeedPetsTools:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PoppySeedPetsTools:build"
+            "buildTarget": "PoppySeedPetsTools:build"
           }
         },
         "test": {

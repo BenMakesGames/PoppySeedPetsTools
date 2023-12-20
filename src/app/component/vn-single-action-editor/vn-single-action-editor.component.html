@@ -3,6 +3,6 @@
 </select></p>
 <ng-container *ngIf="action.type === 'exit'"></ng-container>
 <ng-container *ngIf="action.type === 'receiveItem'">
-  <pre>@TODO receive item</pre>
+  <pre>&#64;TODO receive item</pre>
 </ng-container>
 <app-vn-set-step-action-editor *ngIf="action.type === 'setStep'" [storySections]="storySections" [action]="setStepChoiceAction()" (actionChange)="action = $event"></app-vn-set-step-action-editor>
