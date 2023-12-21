@@ -69,7 +69,7 @@ export class VnEditorComponent implements OnInit {
 
   doAddStory()
   {
-    /*this.stories.push(new {
+    /*this.stories.push({
 
     });*/
   }

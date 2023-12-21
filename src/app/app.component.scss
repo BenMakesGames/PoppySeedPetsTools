@@ -3,6 +3,7 @@ nav {
   display: flex;
   flex-direction: row;
   background-color: #369;
+  padding: 0.5em 0.5em 0;
 
   > a {
     display: block;
@@ -10,11 +11,10 @@ nav {
     width: 10rem;
     color: white;
     padding: 0.5rem 0;
-    border-right: 1px solid white;
     text-decoration: none;
 
     &.active {
-      background-color: #fff;
+      background-color: #eee;
       color: black;
       font-weight: bold;
     }

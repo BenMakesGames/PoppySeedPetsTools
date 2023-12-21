@@ -1,0 +1,17 @@
+<p>
+  <label>Description</label>
+  <textarea [(ngModel)]="adventure.description" (change)="doUpdateAdventure()"></textarea>
+</p>
+<ng-container *ngFor="let button of adventure.buttons; let i = index">
+  <p>
+    <span style="display:flex; flex-direction: row; gap: 1em;">
+      <label>Choice {{i + 1}}</label>
+      <button (click)="doDeleteChoice(i)">Remove</button>
+    </span>
+    <input type="text" [(ngModel)]="adventure.buttons[i]" (change)="doUpdateAdventure()">
+  </p>
+  <app-adventure [(adventure)]="adventure.outcomes[i]" (adventureChange)="doUpdateAdventure()" />
+</ng-container>
+<p>
+  <button (click)="doAddChoice()">+ Choice</button>
+</p>

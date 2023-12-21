@@ -1,0 +1,7 @@
+<div style="margin-top:1em;">
+  <app-adventure [(adventure)]="adventure" (adventureChange)="doUpdateAdventureJson()" [hasParents]="false" />
+</div>
+<p style="margin-top:3em;">
+  <label>JSON</label>
+  <textarea readonly>{{ adventureJson }}</textarea>
+</p>

@@ -1,7 +1,0 @@
-<ol>
-  <li *ngFor="let choice of choices; let i = index">
-    <app-vn-single-choice-editor [(choice)]="choices[i]" [storySections]="storySections"></app-vn-single-choice-editor>
-    <p><button type="button" (click)="doDeleteChoice(choice)">Delete</button></p>
-  </li>
-</ol>
-<p><button type="button" (click)="doAddChoice()">+ Choice</button></p>

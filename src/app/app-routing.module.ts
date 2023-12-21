@@ -5,6 +5,7 @@ import {NewSpeciesComponent} from "./page/new-species/new-species.component";
 import {NewHatComponent} from "./page/new-hat/new-hat.component";
 import {HomeComponent} from "./page/home/home.component";
 import {VnEditorComponent} from "./page/vn-editor/vn-editor.component";
+import {AdventureEditorComponent} from "./page/adventure-editor/adventure-editor.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'newHat', component: NewHatComponent },
   { path: 'newSpecies', component: NewSpeciesComponent },
   { path: 'vnEditor', component: VnEditorComponent },
+  { path: 'adventureEditor', component: AdventureEditorComponent },
 ];
 
 @NgModule({
