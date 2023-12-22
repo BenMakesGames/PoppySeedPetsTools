@@ -2,6 +2,13 @@
   <app-adventure [(adventure)]="adventure" (adventureChange)="doUpdateAdventureJson()" [hasParents]="false" />
 </div>
 <p style="margin-top:3em;">
-  <label>JSON</label>
+  <span style="display: flex; flex-direction: row; gap: 1em; align-items: center">
+    <label>JSON</label>
+    <div style="margin-left: auto">
+      <button (click)="doCopyToClipboard()">Copy to clipboard</button>
+      {{ ' ' }}
+      <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSczeBLNsktkSBbPZjyooHw5sEVJOBimJDS6xgEgIgFJvgqM8A/viewform">submit idea!</a>
+    </div>
+  </span>
   <textarea readonly>{{ adventureJson }}</textarea>
 </p>

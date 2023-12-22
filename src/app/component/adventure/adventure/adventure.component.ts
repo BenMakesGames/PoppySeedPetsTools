@@ -21,7 +21,7 @@ export class AdventureComponent {
 
   doUpdateAdventure(adventure: Adventure)
   {
-    this.adventure = adventure;
+    this.adventure = { ... adventure };
     this.adventureChange.emit(this.adventure);
   }
 

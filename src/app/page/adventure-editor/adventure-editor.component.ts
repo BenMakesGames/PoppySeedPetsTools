@@ -17,11 +17,23 @@ export class AdventureEditorComponent {
 
   ngOnInit()
   {
+    this.adventureJson = window.localStorage.getItem('adventureJson');
+    if (this.adventureJson)
+    {
+      this.adventure = JSON.parse(this.adventureJson);
+    }
+
     this.doUpdateAdventureJson();
   }
 
   doUpdateAdventureJson()
   {
     this.adventureJson = JSON.stringify(this.adventure, null, 4);
+    window.localStorage.setItem('adventureJson', this.adventureJson);
+  }
+
+  doCopyToClipboard()
+  {
+    navigator.clipboard.writeText(this.adventureJson);
   }
 }

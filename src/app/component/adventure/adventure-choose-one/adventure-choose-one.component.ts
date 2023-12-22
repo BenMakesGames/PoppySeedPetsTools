@@ -34,4 +34,10 @@ export class AdventureChooseOneComponent {
   {
     this.adventureChange.emit(this.adventure);
   }
+
+  doUpdateButton(index: number, event)
+  {
+    this.adventure.buttons[index] = event.target.value;
+    this.doUpdateAdventure();
+  }
 }

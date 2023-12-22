@@ -45,11 +45,12 @@
 </p>
 <div *ngIf="adventure.receiveItems">
   <div class="items">
-    <ng-container *ngFor="let item of adventure.receiveItems; let i = index">
+    @for(item of adventure.receiveItems; let i = $index; track i)
+    {
       <div>Item {{ i }}</div>
-      <input type="text" [(ngModel)]="adventure.receiveItems[i]" (change)="doUpdateAdventure()" />
+      <input type="text" [value]="adventure.receiveItems[i]" (change)="doUpdateItemName(i, $event)" />
       <button (click)="doRemoveItem(i)">Remove</button>
-    </ng-container>
+    }
   </div>
   <p>
     <button (click)="doAddItem()">+ Item</button>

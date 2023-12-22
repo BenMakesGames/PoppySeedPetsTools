@@ -19,6 +19,12 @@ input,select,textarea {
   border-radius: 3px;
 }
 
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+}
+
 #editor {
   display: grid;
   grid-template-columns: auto 350px;
@@ -108,6 +114,7 @@ input,select,textarea {
 
 label {
   display: block;
+  width: fit-content;
 }
 
 button,.button {

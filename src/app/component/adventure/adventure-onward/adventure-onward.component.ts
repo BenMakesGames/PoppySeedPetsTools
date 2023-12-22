@@ -81,4 +81,11 @@ export class AdventureOnwardComponent {
 
     this.doUpdateAdventure();
   }
+
+  doUpdateItemName(index: number, event)
+  {
+    this.adventure.receiveItems[index] = event.target.value;
+
+    this.doUpdateAdventure();
+  }
 }
