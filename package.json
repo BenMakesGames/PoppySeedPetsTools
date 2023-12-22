@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "electron": "ng build --prod && electron .",
-    "build:win": "ng build --prod && electron-packager . --out=build --platform=win32 --overwrite --no-prune --ignore=/node_modules --ignore=/e2e --ignore=/src --ignore=/build --ignore=/.idea"
+    "electron": "ng build && electron .",
+    "build:win": "ng build && electron-packager . --out=build --platform=win32 --overwrite --ignore=/node_modules --ignore=/e2e --ignore=/src --ignore=/build --ignore=/.idea"
   },
   "private": true,
   "dependencies": {
