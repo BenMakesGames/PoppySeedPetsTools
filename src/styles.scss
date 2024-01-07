@@ -123,4 +123,63 @@ button,.button {
   color: #fff;
   border: none;
   cursor: pointer;
+
+  &.link-text {
+    background-color: transparent;
+    color: #369;
+    padding: 0;
+    text-decoration: underline;
+  }
+}
+
+
+
+/***** dialogs ***************************************************************/
+
+.mat-mdc-dialog-container .mdc-dialog__container .mdc-dialog__surface {
+  background: #eee;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+}
+
+.cdk-overlay-container {
+  > * {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .cdk-overlay-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .cdk-global-overlay-wrapper {
+    display: flex;
+    pointer-events: none;
+
+    .cdk-overlay-pane {
+      max-height: calc(100vh - 5rem);
+      display: flex;
+      pointer-events: auto;
+    }
+  }
+}
+
+.dialog {
+  padding: 1rem;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.error {
+  color: red;
 }
