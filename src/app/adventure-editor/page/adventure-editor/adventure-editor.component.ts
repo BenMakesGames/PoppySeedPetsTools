@@ -39,14 +39,7 @@ export class AdventureEditorComponent {
 
   doCopyToClipboard()
   {
-    window.navigator.clipboard.writeText(this.adventureJson)
-      .then(() => {
-
-      })
-      .catch(e => {
-        alert('could not copy to clipboard, for some reason...');
-      })
-    ;
+    window.navigator.clipboard.writeText(this.adventureJson);
   }
 
   doImport()
