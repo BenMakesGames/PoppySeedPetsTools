@@ -2,16 +2,6 @@
 
 A web version of this tool can be found at http://tools.poppyseedpets.com
 
-## Running PoppySeedPetsTools on Your Computer
-
-1. **Download PoppySeedPetsTools.**
-   * Download the zip appropriate for your computer:
-      * Windows: https://github.com/BenMakesGames/PoppySeedPetsTools/raw/main/build/poppy-seed-pets-tools-win32-x64.7z
-      * Linux: *not yet available*
-      * MacOS: *not yet available*
-   * Extract the zip wherever you want.
-2. **Run PoppySeedPetsTools.** Open the folder where you extracted the zip contents. Insider the folder "poppy-seed-pets-tools" is a program called "poppy-seed-pets-tools". Run it!
-
 ## Developing PoppySeedPetsTools
 
 1. **Install Node and npm.** You can download an installer for them here: https://nodejs.org/en/download/
