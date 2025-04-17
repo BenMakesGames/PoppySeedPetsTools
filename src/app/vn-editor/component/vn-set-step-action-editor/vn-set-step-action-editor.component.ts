@@ -4,9 +4,10 @@ import {StoryChoiceActionSetStepModel} from "../../../adventure-editor/model/sto
 import {GraphChangesService} from "../../service/graph-changes.service";
 
 @Component({
-  selector: 'app-vn-set-step-action-editor',
-  templateUrl: './vn-set-step-action-editor.component.html',
-  styleUrls: ['./vn-set-step-action-editor.component.scss']
+    selector: 'app-vn-set-step-action-editor',
+    templateUrl: './vn-set-step-action-editor.component.html',
+    styleUrls: ['./vn-set-step-action-editor.component.scss'],
+    standalone: false
 })
 export class VnSetStepActionEditorComponent implements OnInit {
 

@@ -4,9 +4,10 @@ import {calculateToolStyles} from "../../../functions";
 import {SPECIES} from "../../../functions";
 
 @Component({
-  selector: 'app-new-item',
-  templateUrl: './new-item.component.html',
-  styleUrls: ['./new-item.component.scss']
+    selector: 'app-new-item',
+    templateUrl: './new-item.component.html',
+    styleUrls: ['./new-item.component.scss'],
+    standalone: false
 })
 export class NewItemComponent implements OnInit {
 

@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
-  templateUrl: './import-adventure.component.html',
-  styleUrl: './import-adventure.component.scss'
+    templateUrl: './import-adventure.component.html',
+    styleUrl: './import-adventure.component.scss',
+    standalone: false
 })
 export class ImportAdventureComponent {
   jsonText = '';

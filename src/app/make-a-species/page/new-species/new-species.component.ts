@@ -3,9 +3,10 @@ import {GripModel, HatModel, SpeciesModel} from "../../../models";
 import {calculateHatStyles, calculateToolStyles} from "../../../functions";
 
 @Component({
-  selector: 'app-new-species',
-  templateUrl: './new-species.component.html',
-  styleUrls: ['./new-species.component.scss']
+    selector: 'app-new-species',
+    templateUrl: './new-species.component.html',
+    styleUrls: ['./new-species.component.scss'],
+    standalone: false
 })
 export class NewSpeciesComponent implements OnInit {
 

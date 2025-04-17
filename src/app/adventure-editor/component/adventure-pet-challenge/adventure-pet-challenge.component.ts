@@ -2,9 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {PetChallenge} from "../adventure/adventure.component";
 
 @Component({
-  selector: 'app-adventure-pet-challenge',
-  templateUrl: './adventure-pet-challenge.component.html',
-  styleUrl: './adventure-pet-challenge.component.scss'
+    selector: 'app-adventure-pet-challenge',
+    templateUrl: './adventure-pet-challenge.component.html',
+    styleUrl: './adventure-pet-challenge.component.scss',
+    standalone: false
 })
 export class AdventurePetChallengeComponent {
   @Input() adventure: PetChallenge;

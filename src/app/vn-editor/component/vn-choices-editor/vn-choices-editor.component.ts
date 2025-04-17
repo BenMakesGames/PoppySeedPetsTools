@@ -3,9 +3,10 @@ import {StorySectionModel} from "../../../adventure-editor/model/story-section.m
 import {StoryChoiceModel} from "../../../adventure-editor/model/story-choice.model";
 
 @Component({
-  selector: 'app-vn-choices-editor',
-  templateUrl: './vn-choices-editor.component.html',
-  styleUrls: ['./vn-choices-editor.component.scss']
+    selector: 'app-vn-choices-editor',
+    templateUrl: './vn-choices-editor.component.html',
+    styleUrls: ['./vn-choices-editor.component.scss'],
+    standalone: false
 })
 export class VnChoicesEditorComponent implements OnInit {
 

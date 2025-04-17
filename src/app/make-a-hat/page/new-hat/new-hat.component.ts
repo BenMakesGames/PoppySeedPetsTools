@@ -3,9 +3,10 @@ import {HatModel, SpeciesModel} from "../../../models";
 import {calculateHatStyles, SPECIES} from "../../../functions";
 
 @Component({
-  selector: 'app-new-hat',
-  templateUrl: './new-hat.component.html',
-  styleUrls: ['./new-hat.component.scss']
+    selector: 'app-new-hat',
+    templateUrl: './new-hat.component.html',
+    styleUrls: ['./new-hat.component.scss'],
+    standalone: false
 })
 export class NewHatComponent implements OnInit {
 

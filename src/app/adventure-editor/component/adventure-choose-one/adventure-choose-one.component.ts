@@ -2,9 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ChooseOne, Onward} from "../adventure/adventure.component";
 
 @Component({
-  selector: 'app-adventure-choose-one',
-  templateUrl: './adventure-choose-one.component.html',
-  styleUrl: './adventure-choose-one.component.scss'
+    selector: 'app-adventure-choose-one',
+    templateUrl: './adventure-choose-one.component.html',
+    styleUrl: './adventure-choose-one.component.scss',
+    standalone: false
 })
 export class AdventureChooseOneComponent {
   @Input() adventure: ChooseOne;

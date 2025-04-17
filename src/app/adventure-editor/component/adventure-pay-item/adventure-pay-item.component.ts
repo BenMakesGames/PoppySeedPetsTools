@@ -2,9 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Onward, PayItem} from "../adventure/adventure.component";
 
 @Component({
-  selector: 'app-adventure-pay-item',
-  templateUrl: './adventure-pay-item.component.html',
-  styleUrl: './adventure-pay-item.component.scss'
+    selector: 'app-adventure-pay-item',
+    templateUrl: './adventure-pay-item.component.html',
+    styleUrl: './adventure-pay-item.component.scss',
+    standalone: false
 })
 export class AdventurePayItemComponent {
   @Input() adventure: PayItem;

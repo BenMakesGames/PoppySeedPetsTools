@@ -3,9 +3,10 @@ import {Onward} from "../adventure/adventure.component";
 import {randomItemName} from "../../../helpful-functions";
 
 @Component({
-  selector: 'app-adventure-onward',
-  templateUrl: './adventure-onward.component.html',
-  styleUrl: './adventure-onward.component.scss'
+    selector: 'app-adventure-onward',
+    templateUrl: './adventure-onward.component.html',
+    styleUrl: './adventure-onward.component.scss',
+    standalone: false
 })
 export class AdventureOnwardComponent {
   @Input() adventure: Onward;

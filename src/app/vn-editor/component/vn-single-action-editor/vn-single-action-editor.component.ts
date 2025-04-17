@@ -8,9 +8,10 @@ import {
 } from "../../../adventure-editor/model/story-choice-action-receive-item.model";
 
 @Component({
-  selector: 'app-vn-single-action-editor',
-  templateUrl: './vn-single-action-editor.component.html',
-  styleUrls: ['./vn-single-action-editor.component.scss']
+    selector: 'app-vn-single-action-editor',
+    templateUrl: './vn-single-action-editor.component.html',
+    styleUrls: ['./vn-single-action-editor.component.scss'],
+    standalone: false
 })
 export class VnSingleActionEditorComponent implements OnInit {
 

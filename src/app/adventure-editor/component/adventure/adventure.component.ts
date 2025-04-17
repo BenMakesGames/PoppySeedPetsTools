@@ -2,9 +2,10 @@ import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '
 import {randomItemName} from "../../../helpful-functions";
 
 @Component({
-  selector: 'app-adventure',
-  templateUrl: './adventure.component.html',
-  styleUrl: './adventure.component.scss'
+    selector: 'app-adventure',
+    templateUrl: './adventure.component.html',
+    styleUrl: './adventure.component.scss',
+    standalone: false
 })
 export class AdventureComponent implements OnChanges {
   @Input() adventure: Adventure;

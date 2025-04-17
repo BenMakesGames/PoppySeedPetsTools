@@ -6,9 +6,10 @@ import {GraphChangesService} from "../../service/graph-changes.service";
 import {StoryChoiceActionSetStepModel} from "../../../adventure-editor/model/story-choice-action-set-step.model";
 
 @Component({
-  selector: 'app-vn-graph',
-  template: '<div id="chart"></div>',
-  styleUrls: ['./vn-graph.component.scss']
+    selector: 'app-vn-graph',
+    template: '<div id="chart"></div>',
+    styleUrls: ['./vn-graph.component.scss'],
+    standalone: false
 })
 export class VnGraphComponent implements OnInit, OnChanges, OnDestroy {
 

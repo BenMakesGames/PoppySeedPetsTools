@@ -4,9 +4,10 @@ import {MatDialog} from "@angular/material/dialog";
 import {ImportAdventureComponent} from "../../dialog/import-adventure/import-adventure.component";
 
 @Component({
-  selector: 'app-adventure-editor',
-  templateUrl: './adventure-editor.component.html',
-  styleUrl: './adventure-editor.component.scss'
+    selector: 'app-adventure-editor',
+    templateUrl: './adventure-editor.component.html',
+    styleUrl: './adventure-editor.component.scss',
+    standalone: false
 })
 export class AdventureEditorComponent {
   adventure: Adventure = <Onward>{
