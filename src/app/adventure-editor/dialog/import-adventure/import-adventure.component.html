@@ -1,7 +1,7 @@
 <form class="dialog" (submit)="doImport()">
   <div>
     <label>Adventure JSON</label>
-    <textarea [(ngModel)]="jsonText"></textarea>
+    <textarea [(ngModel)]="jsonText" rows="5"></textarea>
     <div class="error" *ngIf="error">{{ error }}</div>
   </div>
   <div class="buttons">
