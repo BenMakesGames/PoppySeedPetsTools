@@ -1,12 +1,15 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Onward} from "../adventure/adventure.component";
 import {randomItemName} from "../../../helpful-functions";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-    selector: 'app-adventure-onward',
-    templateUrl: './adventure-onward.component.html',
-    styleUrl: './adventure-onward.component.scss',
-    standalone: false
+  selector: 'app-adventure-onward',
+  templateUrl: './adventure-onward.component.html',
+  styleUrl: './adventure-onward.component.scss',
+  standalone: true,
+  imports: [FormsModule, NgIf, NgFor]
 })
 export class AdventureOnwardComponent {
   @Input() adventure: Onward;

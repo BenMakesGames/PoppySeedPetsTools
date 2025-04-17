@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {GripModel, HatModel, SpeciesModel} from "../../../models";
 import {calculateHatStyles, calculateToolStyles} from "../../../functions";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgStyle, NgFor } from '@angular/common';
 
 @Component({
-    selector: 'app-new-species',
-    templateUrl: './new-species.component.html',
-    styleUrls: ['./new-species.component.scss'],
-    standalone: false
+  selector: 'app-new-species',
+  templateUrl: './new-species.component.html',
+  styleUrls: ['./new-species.component.scss'],
+  standalone: true,
+  imports: [FormsModule, NgIf, NgStyle, NgFor]
 })
 export class NewSpeciesComponent implements OnInit {
 
@@ -174,14 +177,14 @@ export class NewSpeciesComponent implements OnInit {
 
     this.SQL = `UPDATE pet_species
 SET
-    flip_x=` + (this.species.flipX ? 1 : 0) + `,
-    hand_x=` + this.species.handX + `,
-    hand_y=` + this.species.handY + `,
-    hand_angle=` + this.species.handAngle + `,
-    hand_behind=` + (this.species.handBehind ? 1 : 0) + `,
-    hat_x=` + this.species.hatX + `,
-    hat_y=` + this.species.hatY + `,
-    hat_angle=` + this.species.hatAngle + `
+    flip_x=${(this.species.flipX ? 1 : 0)},
+    hand_x=${this.species.handX},
+    hand_y=${this.species.handY},
+    hand_angle=${this.species.handAngle},
+    hand_behind=${(this.species.handBehind ? 1 : 0)},
+    hat_x=${this.species.hatX},
+    hat_y=${this.species.hatY},
+    hat_angle=${this.species.hatAngle}
 WHERE id=ID_GOES_HERE
 LIMIT 1`;
 

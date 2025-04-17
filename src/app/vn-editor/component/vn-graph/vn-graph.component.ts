@@ -8,8 +8,7 @@ import {StoryChoiceActionSetStepModel} from "../../../adventure-editor/model/sto
 @Component({
     selector: 'app-vn-graph',
     template: '<div id="chart"></div>',
-    styleUrls: ['./vn-graph.component.scss'],
-    standalone: false
+    styleUrls: ['./vn-graph.component.scss']
 })
 export class VnGraphComponent implements OnInit, OnChanges, OnDestroy {
 

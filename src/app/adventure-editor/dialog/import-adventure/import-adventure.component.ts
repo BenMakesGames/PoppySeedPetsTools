@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
-    templateUrl: './import-adventure.component.html',
-    styleUrl: './import-adventure.component.scss',
-    standalone: false
+  templateUrl: './import-adventure.component.html',
+  styleUrl: './import-adventure.component.scss',
+  standalone: true,
+  imports: [FormsModule, NgIf]
 })
 export class ImportAdventureComponent {
   jsonText = '';

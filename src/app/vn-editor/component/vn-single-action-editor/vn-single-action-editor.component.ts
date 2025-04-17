@@ -6,12 +6,16 @@ import {GraphChangesService} from "../../service/graph-changes.service";
 import {
   StoryChoiceActionReceiveItemModel
 } from "../../../adventure-editor/model/story-choice-action-receive-item.model";
+import { FormsModule } from '@angular/forms';
+import { NgFor, NgIf } from '@angular/common';
+import { VnSetStepActionEditorComponent } from '../vn-set-step-action-editor/vn-set-step-action-editor.component';
 
 @Component({
-    selector: 'app-vn-single-action-editor',
-    templateUrl: './vn-single-action-editor.component.html',
-    styleUrls: ['./vn-single-action-editor.component.scss'],
-    standalone: false
+  selector: 'app-vn-single-action-editor',
+  templateUrl: './vn-single-action-editor.component.html',
+  styleUrls: ['./vn-single-action-editor.component.scss'],
+  standalone: true,
+  imports: [FormsModule, NgFor, NgIf, VnSetStepActionEditorComponent]
 })
 export class VnSingleActionEditorComponent implements OnInit {
 

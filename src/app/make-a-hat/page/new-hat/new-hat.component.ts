@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {HatModel, SpeciesModel} from "../../../models";
 import {calculateHatStyles, SPECIES} from "../../../functions";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgStyle, NgFor } from '@angular/common';
 
 @Component({
-    selector: 'app-new-hat',
-    templateUrl: './new-hat.component.html',
-    styleUrls: ['./new-hat.component.scss'],
-    standalone: false
+  selector: 'app-new-hat',
+  templateUrl: './new-hat.component.html',
+  styleUrls: ['./new-hat.component.scss'],
+  standalone: true,
+  imports: [FormsModule, NgIf, NgStyle, NgFor]
 })
 export class NewHatComponent implements OnInit {
 
