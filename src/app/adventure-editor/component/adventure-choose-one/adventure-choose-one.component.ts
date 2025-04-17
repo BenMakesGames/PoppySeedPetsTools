@@ -1,10 +1,13 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ChooseOne, Onward} from "../adventure/adventure.component";
+import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
+import { ChooseOne, Onward, AdventureComponent } from "../adventure/adventure.component";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-adventure-choose-one',
   templateUrl: './adventure-choose-one.component.html',
-  styleUrl: './adventure-choose-one.component.scss'
+  styleUrl: './adventure-choose-one.component.scss',
+  standalone: true,
+  imports: [FormsModule, forwardRef(() => AdventureComponent)]
 })
 export class AdventureChooseOneComponent {
   @Input() adventure: ChooseOne;

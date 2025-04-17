@@ -13,7 +13,7 @@ function createWindow() {
     });
 
     Menu.setApplicationMenu(null);
-    win.loadURL(`file://${__dirname}/dist/PoppySeedPetsTools/index.html`);
+    win.loadURL(`file://${__dirname}/dist/PoppySeedPetsTools/browser/index.html`);
     //win.openDevTools();
 
     //// uncomment below to open the DevTools.

@@ -1,10 +1,14 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Onward, PayItem} from "../adventure/adventure.component";
+import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
+import { Onward, PayItem, AdventureComponent } from "../adventure/adventure.component";
+import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-adventure-pay-item',
   templateUrl: './adventure-pay-item.component.html',
-  styleUrl: './adventure-pay-item.component.scss'
+  styleUrl: './adventure-pay-item.component.scss',
+  standalone: true,
+  imports: [FormsModule, forwardRef(() => AdventureComponent), NgIf]
 })
 export class AdventurePayItemComponent {
   @Input() adventure: PayItem;

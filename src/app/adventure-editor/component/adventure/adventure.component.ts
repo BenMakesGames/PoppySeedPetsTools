@@ -1,10 +1,21 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {randomItemName} from "../../../helpful-functions";
+import { FormsModule } from '@angular/forms';
+import { AdventureChooseOneComponent } from '../adventure-choose-one/adventure-choose-one.component';
+import { AdventureMoveToComponent } from '../adventure-move-to/adventure-move-to.component';
+import { AdventureOnwardComponent } from '../adventure-onward/adventure-onward.component';
+import { AdventurePayItemComponent } from '../adventure-pay-item/adventure-pay-item.component';
+import { AdventurePayMoneyComponent } from '../adventure-pay-money/adventure-pay-money.component';
+import { AdventurePayItemAndMoneyComponent } from '../adventure-pay-item-and-money/adventure-pay-item-and-money.component';
+import { AdventurePetChallengeComponent } from '../adventure-pet-challenge/adventure-pet-challenge.component';
+import { AdventureIconPipe } from '../../pipe/adventure-icon.pipe';
 
 @Component({
   selector: 'app-adventure',
   templateUrl: './adventure.component.html',
-  styleUrl: './adventure.component.scss'
+  styleUrl: './adventure.component.scss',
+  standalone: true,
+  imports: [FormsModule, AdventureChooseOneComponent, AdventureMoveToComponent, AdventureOnwardComponent, AdventurePayItemComponent, AdventurePayMoneyComponent, AdventurePayItemAndMoneyComponent, AdventurePetChallengeComponent, AdventureIconPipe]
 })
 export class AdventureComponent implements OnChanges {
   @Input() adventure: Adventure;

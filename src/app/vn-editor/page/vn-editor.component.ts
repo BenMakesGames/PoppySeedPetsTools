@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {StoryModel} from "../../adventure-editor/model/story.model";
 import {StorySectionModel} from "../../adventure-editor/model/story-section.model";
+import { NgIf, NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { VnChoicesEditorComponent } from '../component/vn-choices-editor/vn-choices-editor.component';
+import { VnGraphComponent } from '../component/vn-graph/vn-graph.component';
 
 @Component({
   selector: 'app-page',
   templateUrl: './vn-editor.component.html',
-  styleUrls: ['./vn-editor.component.scss']
+  styleUrls: ['./vn-editor.component.scss'],
+  standalone: true,
+  imports: [NgIf, FormsModule, NgFor, VnChoicesEditorComponent, VnGraphComponent]
 })
 export class VnEditorComponent implements OnInit {
 

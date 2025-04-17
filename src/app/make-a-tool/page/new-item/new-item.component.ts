@@ -2,11 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {GripModel, SpeciesModel} from "../../../models";
 import {calculateToolStyles} from "../../../functions";
 import {SPECIES} from "../../../functions";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgStyle, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-new-item',
   templateUrl: './new-item.component.html',
-  styleUrls: ['./new-item.component.scss']
+  styleUrls: ['./new-item.component.scss'],
+  standalone: true,
+  imports: [FormsModule, NgIf, NgStyle, NgFor]
 })
 export class NewItemComponent implements OnInit {
 
@@ -84,11 +88,11 @@ export class NewItemComponent implements OnInit {
 
     this.SQL = `UPDATE item_tool
 SET
-  grip_x=` + this.grip.x + `,
-  grip_y=` + this.grip.y + `,
-  grip_angle=` + this.grip.angle + `,
-  grip_angle_fixed=` + (this.grip.angleFixed ? 1 : 0) + `,
-  grip_scale=` + this.grip.scale + `
+  grip_x=${this.grip.x},
+  grip_y=${this.grip.y},
+  grip_angle=${this.grip.angle},
+  grip_angle_fixed=${(this.grip.angleFixed ? 1 : 0)},
+  grip_scale=${this.grip.scale}
 WHERE id=ID_GOES_HERE
 LIMIT 1`;
   }

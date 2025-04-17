@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import {HatModel, SpeciesModel} from "../../../models";
 import {calculateHatStyles, SPECIES} from "../../../functions";
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgStyle, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-new-hat',
   templateUrl: './new-hat.component.html',
-  styleUrls: ['./new-hat.component.scss']
+  styleUrls: ['./new-hat.component.scss'],
+  standalone: true,
+  imports: [FormsModule, NgIf, NgStyle, NgFor]
 })
 export class NewHatComponent implements OnInit {
 
@@ -83,11 +87,11 @@ export class NewHatComponent implements OnInit {
 
     this.SQL = `UPDATE item_hat
 SET
-  head_x=` + this.hat.x + `,
-  head_y=` + this.hat.y + `,
-  head_angle=` + this.hat.angle + `,
-  head_angle_fixed=` + (this.hat.angleFixed ? 1 : 0) + `,
-  head_scale=` + this.hat.scale + `
+  head_x=${this.hat.x},
+  head_y=${this.hat.y},
+  head_angle=${this.hat.angle},
+  head_angle_fixed=${(this.hat.angleFixed ? 1 : 0)},
+  head_scale=${this.hat.scale}
 WHERE id=ID_GOES_HERE
 LIMIT 1`;
   }

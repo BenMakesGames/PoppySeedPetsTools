@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import {Adventure, Onward} from "../../component/adventure/adventure.component";
+import { Adventure, Onward, AdventureComponent } from "../../component/adventure/adventure.component";
 import {MatDialog} from "@angular/material/dialog";
 import {ImportAdventureComponent} from "../../dialog/import-adventure/import-adventure.component";
 
 @Component({
   selector: 'app-adventure-editor',
   templateUrl: './adventure-editor.component.html',
-  styleUrl: './adventure-editor.component.scss'
+  styleUrl: './adventure-editor.component.scss',
+  standalone: true,
+  imports: [AdventureComponent]
 })
 export class AdventureEditorComponent {
   adventure: Adventure = <Onward>{
