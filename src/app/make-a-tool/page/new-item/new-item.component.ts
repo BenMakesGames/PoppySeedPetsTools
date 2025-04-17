@@ -85,11 +85,11 @@ export class NewItemComponent implements OnInit {
 
     this.SQL = `UPDATE item_tool
 SET
-  grip_x=` + this.grip.x + `,
-  grip_y=` + this.grip.y + `,
-  grip_angle=` + this.grip.angle + `,
-  grip_angle_fixed=` + (this.grip.angleFixed ? 1 : 0) + `,
-  grip_scale=` + this.grip.scale + `
+  grip_x=${this.grip.x},
+  grip_y=${this.grip.y},
+  grip_angle=${this.grip.angle},
+  grip_angle_fixed=${(this.grip.angleFixed ? 1 : 0)},
+  grip_scale=${this.grip.scale}
 WHERE id=ID_GOES_HERE
 LIMIT 1`;
   }
