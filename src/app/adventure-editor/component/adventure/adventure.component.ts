@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {randomItemName} from "../../../helpful-functions";
 
 @Component({
@@ -6,13 +6,21 @@ import {randomItemName} from "../../../helpful-functions";
   templateUrl: './adventure.component.html',
   styleUrl: './adventure.component.scss'
 })
-export class AdventureComponent {
+export class AdventureComponent implements OnChanges {
   @Input() adventure: Adventure;
   @Output() adventureChange = new EventEmitter<Adventure>();
 
   @Input() hasParents = true;
 
   isOpen = true;
+  adventureColor = '#ccc';
+
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes['adventure'])
+    {
+      this.adventureColor = this.getAdventureColor(this.adventure);
+    }
+  }
 
   doCollapse()
   {
@@ -22,12 +30,41 @@ export class AdventureComponent {
   doUpdateAdventure(adventure: Adventure)
   {
     this.adventure = { ... adventure };
+    this.adventureColor = this.getAdventureColor(this.adventure);
     this.adventureChange.emit(this.adventure);
+  }
+
+  getAdventureColor(adventure: Adventure)
+  {
+    switch(adventure.type)
+    {
+      case 'onward':
+        return '#43b041';
+
+      case 'chooseOne':
+        return '#7db7ff';
+
+      case 'payItem?':
+        return '#ae7d24';
+
+      case 'payMoneys?':
+        return '#db0';
+
+      case 'payItemAndMoneys?':
+        return '#ccc';
+
+      case 'petChallenge':
+        return '#b04141';
+
+      default:
+        return '#ccc';
+    }
   }
 
   doChangeAdventureType()
   {
     this.adventure = { ... this.adventure };
+    this.adventureColor = this.getAdventureColor(this.adventure);
 
     switch(this.adventure.type)
     {

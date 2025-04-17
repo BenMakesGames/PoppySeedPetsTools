@@ -7,8 +7,8 @@ html,body {
 }
 
 input,select,textarea,button {
-  font-family: system-ui, sans-serif;
-  font-size: 1em;
+  font-family: inherit;
+  font-size: inherit;
   box-sizing: border-box;
   padding: 0.25em 0.5em;
 }

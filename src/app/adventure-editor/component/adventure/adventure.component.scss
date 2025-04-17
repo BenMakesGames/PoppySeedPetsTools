@@ -11,6 +11,7 @@ img {
   height: 2em;
   display: block;
   position: relative;
+  z-index: 1;
 }
 
 .tree-line {
@@ -35,10 +36,27 @@ img {
 .accordion-button
 {
   position: absolute;
-  left: -2.25em;
+  left: -2em;
   width: 1.5em;
   text-align: center;
   top: .25em;
   padding: 0;
   height: 1.5em;
+  line-height: 1.5em;
+}
+
+.collapsed-branch
+{
+  flex-grow: 1;
+  font-weight: bold;
+  padding-top: 0.25em;
+}
+
+.expanded-branch
+{
+  flex-grow: 1;
+  border: 3px solid #ccc;
+  padding: 1em 1em 0;
+  z-index: 0;
+  margin-left: -1.5em;
 }
