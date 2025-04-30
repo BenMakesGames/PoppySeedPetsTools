@@ -85,7 +85,15 @@ export class NewHatComponent implements OnInit {
       this.hatRotationStyle.push(hatStyles.rotation);
     });
 
-    this.SQL = `UPDATE item_hat
+    this.SQL = `/* Creating a new hat: */
+INSERT INTO item_hat
+(id, head_x, head_y, head_angle, head_angle_fixed, head_scale)
+VALUES
+(ID_GOES_HERE, ${this.hat.x}, ${this.hat.y}, ${this.hat.angle}, ${(this.hat.angleFixed ? 1 : 0)}, ${this.hat.scale})
+ON DUPLICATE KEY UPDATE id = id;
+
+/* Updating an existing hat: */
+UPDATE item_hat
 SET
   head_x=${this.hat.x},
   head_y=${this.hat.y},
