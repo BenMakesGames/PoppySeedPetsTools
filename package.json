@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@angular/build": "^19.2.8",
-    "@angular/cli": "^19.2.8",
+    "@angular/cli": "^21.1.4",
     "@angular/compiler-cli": "^19.2.7",
     "electron": "^35.1",
     "@electron/packager": "^18.3",
