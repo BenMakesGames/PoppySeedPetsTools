@@ -14,5 +14,4 @@ A web version of this tool can be found at http://tools.poppyseedpets.com
 
 ### Building
 
-1. **Install Electron Packager.** Run `npm install electron-packager -g`
-2. Run `npm run build:win` (from inside the PoppySeedPetsTools project directory, of course).
+1. Run `npm run build:win` (from inside the PoppySeedPetsTools project directory, of course).
